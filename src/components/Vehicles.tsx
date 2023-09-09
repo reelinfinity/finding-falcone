@@ -51,9 +51,7 @@ export default function Vehicles({
                 }}
                 className={({ active, checked }) =>
                   `
-                  ${
-                    checked ? "bg-sky-900 bg-opacity-75 text-white" : "bg-white"
-                  }
+                  ${checked ? "bg-sky-900 bg-opacity-75 text-white" : ""}
                   ${
                     (vehicle.total_no === 0 ||
                       getIsRangeLess(vehicle.max_distance)) &&
@@ -62,7 +60,7 @@ export default function Vehicles({
                       ? "bg-gray-200"
                       : ""
                   }
-                    relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`
+                    relative flex cursor-pointer disabled:cursor-none rounded-lg px-5 py-4 shadow-md focus:outline-none`
                 }
               >
                 {({ checked }) => (
