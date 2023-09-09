@@ -50,7 +50,7 @@ export const getToken = createAsyncThunk("app/getToken", async () => {
 
 export const getResult = createAsyncThunk(
   "app/result",
-  async (args, { getState }) => {
+  async (_args, { getState }) => {
     const state = getState();
     const data = await fetchResult(
       (state as AppState).destinations,
